@@ -1,0 +1,296 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>灌区控制</title>
+	<meta charset="utf-8" />
+    <link href="Content/normalize2.css" rel="stylesheet" type="text/css" />
+    <link href="Content/bootstrap-table.min.css" rel="stylesheet" type="text/css" />
+    <link href="Content/bootstrap.css" rel="stylesheet" type="text/css" />
+    <!--<link href="Content/bootstrap.min.css" rel="stylesheet" type="text/css" />-->
+    <link href="Content/site.css" rel="stylesheet" type="text/css" />
+    <link href="Content/SyButton.css" rel="stylesheet" type="text/css" />
+    <link href="Content/demo.css" rel="stylesheet" type="text/css" />
+
+ 
+    <script type="text/javascript" src="scripts/jquery-1.10.2.js"></script>
+    <script type="text/javascript" src="scripts/jquery-1.10.2.min.js"></script>
+    <script type="text/javascript" src="scripts/bootstrap.js"></script>
+    <script type="text/javascript" src="scripts/bootstrap.min.js"></script>
+    <script type="text/javascript" src="scripts/bootstrap-table.min.js"></script>
+    
+</head>
+<body>
+    <h1 class="Container-title">灌区控制</h1>
+
+    <hr class="Container-line" />
+    <form id="submitForm" class="form-horizontal" role="form" >
+        
+        <div class="btn-box"><button class="btn-primary" type="button" id="refreshData">刷 新</button></div>        
+        <table class="table table-bordered" name="newIrrigatedForm" id="newIrrigatedForm" role="form" method="post" style="width:1060px">
+            <tr>
+                <th class="col-md-3" align="center">灌区名</th>                
+                <th class="col-md-3">温度</th>
+                <th class="col-md-3">湿度</th>
+                <th class="col-md-3">开关控制</th>
+            </tr>
+            <tr align="center" valign="middle">
+                <td class="col-md-3">灌区一</td>
+                <td class="col-md-3" id="temp1" ></td>
+                <td class="col-md-3" id="RH1"></td>
+                <td class="col-md-3">
+                    <div class="switch demo3">
+                        <input type="checkbox" checked id="valveSwitch1" value="1">
+                        <label><i></i></label>
+                    </div>  
+                </td>
+            </tr>
+            <tr align="center" valign="middle">
+                <td class="col-md-3">灌区二</td>
+                <td class="col-md-3" id="temp2"></td>
+                <td class="col-md-3" id="RH2"></td>
+                <td class="col-md-3">                    
+                    <div class="switch demo3">
+                        <input type="checkbox" checked id="valveSwitch2" value="2" >
+                        <label><i></i></label>
+                    </div>                
+                </td>
+            </tr>
+            <tr align="center" valign="middle">
+                <td class="col-md-3">灌区三</td>
+                <td class="col-md-3" id="temp3"></td>
+                <td class="col-md-3" id="RH3"></td>
+                <td class="col-md-3">
+                    <div class="switch demo3">
+                        <input type="checkbox" checked id="valveSwitch3" value="3">
+                        <label><i></i></label>
+                    </div>  
+                </td>
+            </tr>
+            <tr align="center"  valign="middle">
+                <td class="col-md-3">灌区四</td>
+                <td class="col-md-3" id="temp4"></td>
+                <td class="col-md-3" id="RH4"></td>
+                <td class="col-md-3">
+                    <div class="switch demo3">
+                        <input type="checkbox" checked id="valveSwitch4" value="4">
+                        <label><i></i></label>
+                    </div>
+                </td>
+            </tr>
+            <tr align="center"  valign="middle">
+                <td class="col-md-3">灌区五</td>
+                <td class="col-md-3" id="temp5"></td>
+                <td class="col-md-3" id="RH5"></td>
+                <td class="col-md-3">
+                    <div class="switch demo3">
+                        <input type="checkbox" checked id="valveSwitch5" value="5">
+                        <label><i></i></label>
+                    </div>
+                </td>
+            </tr>
+            <tr align="center"  valign="middle">
+                <td class="col-md-3">灌区六</td>
+                <td class="col-md-3" id="temp6"></td>
+                <td class="col-md-3" id="RH6"></td>
+                <td class="col-md-3">
+                    <div class="switch demo3">
+                        <input type="checkbox" checked id="valveSwitch6" value="6">
+                        <label><i></i></label>
+                    </div>
+                </td>
+            </tr>
+            <tr align="center"  valign="middle">
+                <td class="col-md-3">灌区七</td>
+                <td class="col-md-3" id="temp7"></td>
+                <td class="col-md-3" id="RH7"></td>
+                <td class="col-md-3">
+                    <div class="switch demo3">
+                        <input type="checkbox" checked id="valveSwitch7" value="7">
+                        <label><i></i></label>
+                    </div>
+                </td>
+            </tr>
+            <tr align="center"  valign="middle">
+                <td class="col-md-3">灌区八</td>
+                <td class="col-md-3" id="temp8"></td>
+                <td class="col-md-3" id="RH8"></td>
+                <td class="col-md-3">
+                    <div class="switch demo3">
+                        <input type="checkbox" checked id="valveSwitch8" value="8">
+                        <label><i></i></label>
+                    </div>
+                </td>
+            </tr>
+            <tr align="center"  valign="middle">
+                <td class="col-md-3">灌区九</td>
+                <td class="col-md-3" id="temp9"></td>
+                <td class="col-md-3" id="RH9"></td>
+                <td class="col-md-3">
+                    <div class="switch demo3">
+                        <input type="checkbox" checked id="valveSwitch9" value="9">
+                        <label><i></i></label>
+                    </div>
+                </td>
+            </tr>
+
+            <tr align="center"  valign="middle">
+                <td class="col-md-3">
+                    <label>施肥通道一：</label>
+                    <div class="switch demo3">        
+                    <input type="checkbox" checked id="fertChannel1" value="Channel1">
+                    <label><i></i></label>
+                    </div>
+                </td>
+                <td class="col-md-3">
+                <label>施肥通道二：</label>
+                <div class="switch demo3">
+                    <input type="checkbox" checked id="fertChannel2" value="Channel2">
+                    <label><i></i></label>
+                </div>
+                </td>
+                <td class="col-md-3">
+                    <label>施肥通道三：</label>
+                    <div class="switch demo3">
+                    <input type="checkbox" checked id="fertChannel3" value="Channel3">
+                    <label><i></i></label>
+                    </div>
+                </td>
+                <td class="col-md-3">
+                    <label>施肥通道四：</label>
+                    <div class="switch demo3">
+                    <input type="checkbox" checked id="fertChannel4" value="Channel4">
+                    <label><i></i></label>
+                    </div>
+                </td>
+            </tr>
+        </table>
+
+    </form>
+    <script type="text/javascript">
+        window.onload = function () {
+            checkboxOnClick();
+            getAllData();
+           }     
+        $("#refreshData").click(function () {
+
+            getAllData();
+
+            });
+
+
+        function checkboxOnClick() {
+            var isChecked;  
+            $("input[type=checkbox]").click(function () {
+                var checkbox_value = $(this).attr('value');
+                if (checkbox_value.length == 1) {
+                    var IrrigationNO = "#valveSwitch" + checkbox_value;
+                    if ($(IrrigationNO).is(":checked"))
+                        isChecked = 1;
+                    else
+                        isChecked = 0;
+
+                    $.ajax({
+                        url: "http://10.121.140.79:8881/ctrlIrrValve",
+                        data: { "irrno": checkbox_value, "state": isChecked },
+                        timeout: 5000,
+                        async: false,
+                        type: 'GET',
+                        dataType: 'jsonp',
+                        jsonp: 'callback',
+                        success: function (data) {
+                            alert("设置成功");
+                        },
+                        error: function (data) {                           
+                            alert("设置失败");
+                            $(IrrigationNO).each(function () {
+                                this.checked = !this.checked;
+                            })
+                        },
+                        complete: function (XMLHttpRequest, status) { //请求完成后最终执行参数
+                            if (status == 'timeout') {//超时,status还有success,error等值的情况
+                                $(fertChannel).each(function () {
+                                    this.checked = !this.checked;
+                                })
+                                alert("请求超时");
+                            }
+                        }
+                    });
+                } else {
+                    var fertChannel = "#fert" + checkbox_value;
+                    if ($(fertChannel).is(":checked"))
+                        isChecked = 1;
+                    else
+                        isChecked = 0;
+
+                    $.ajax({
+                        url: "http://10.121.140.79:8881/ctrlFertValve",
+                        data: { "fertno": checkbox_value.substr(length - 1, 1), "state": isChecked },
+                        async: false,
+                        timeout: 5000,
+                        type: 'GET',
+                        dataType: 'jsonp',
+                        jsonp: 'callback',
+                        success: function (data) {
+                            alert("设置成功");                           
+                        },
+                        error: function (data) {
+                            alert("设置失败");
+                            $(fertChannel).each(function () {
+                                this.checked = !this.checked;
+                            })
+                        },
+                        complete : function(XMLHttpRequest,status){ //请求完成后最终执行参数
+                        if(status=='timeout'){//超时,status还有success,error等值的情况
+                            $(fertChannel).each(function () {
+                                this.checked = false;
+                            })
+                            alert("请求超时");
+                        }
+                    }
+                    });
+
+                }
+
+            });
+        };
+
+        function getAllData() {
+            $.ajax({
+                url: "http://10.121.140.79:8881/queryAll",
+                async: false,
+                type: "GET",
+                dataType: 'jsonp',
+                jsonp: 'callback',
+                success: function (data) {                                         
+                    var irr = data.Irr;
+                    var fert = data.Fert;
+                    for (i = 0; i <= irr.length - 1;i++){
+                        //console.log('灌区:'+data.Irr[i]['IRRNO']+';阀门状态：'+data.Irr[i]['STATE']+';湿度:'+data.Irr[i]['RH']+';温度:'+data.Irr[i]['TEMP']);
+                        $("#temp" + irr[i]['IRRNO']).text(irr[i]['TEMP'] + " ℃");
+                        $("#RH" + irr[i]['IRRNO']).text(irr[i]['RH'] + " %");
+                        if (irr[i]['STATE'] == 1) {
+                            $("#valveSwitch" + irr[i]['IRRNO']).attr("checked", true);
+                        }
+                        else
+                            $("#valveSwitch" + irr[i]['IRRNO']).attr("checked", false);
+                    }                   
+                    for (i = 0; i <= fert.length - 1; i++) {
+                        //console.log('施肥通道' + fert[i]['FERTNO'] + ';开关状态:' + fert[i]['STATE']);
+                        if (fert[i]['STATE'] == 1)
+                            $("#fertChannel" + fert[i]['FERTNO']).attr("checked", true);
+                        else
+                            $("#fertChannel" + fert[i]['FERTNO']).attr("checked", false);
+                    }
+                    alert("获取数据成功");
+                },
+                error: function (data) {
+                    alert("获取数据失败");
+                }
+               });
+        }
+
+
+
+    </script>
+</body>
+</html>
