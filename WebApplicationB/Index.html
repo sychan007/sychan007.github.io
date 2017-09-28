@@ -190,7 +190,7 @@
                         isChecked = 0;
 
                     $.ajax({
-                        url: "http://10.121.140.79:8881/ctrlIrrValve",
+                        url: "http://1837i8741n.51mypc.cn/ctrlIrrValve",
                         data: { "irrno": checkbox_value, "state": isChecked },
                         timeout: 5000,
                         async: false,
@@ -223,7 +223,7 @@
                         isChecked = 0;
 
                     $.ajax({
-                        url: "http://10.121.140.79:8881/ctrlFertValve",
+                        url: "http://1837i8741n.51mypc.cn/ctrlFertValve",
                         data: { "fertno": checkbox_value.substr(length - 1, 1), "state": isChecked },
                         async: false,
                         timeout: 5000,
@@ -256,7 +256,7 @@
 
         function getAllData() {
             $.ajax({
-                url: "http://10.121.140.79:8881/queryAll",
+                url: "http://1837i8741n.51mypc.cn/queryAll",
                 async: false,
                 type: "GET",
                 dataType: 'jsonp',
