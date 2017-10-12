@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+	<meta charset="utf-8">
+<title>登陆</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+<link href="css/style.css" rel='stylesheet' type='text/css' />
+<script src="script/jquery.min.js"></script>
+</head>
+<body>
+<script>
+	$(document).ready(function() {
+	$('.close').on('click', function(){
+		$('.login-form').fadeOut('slow', function(){
+	  		$('.login-form').remove();
+		});
+	});
+	$('#sid2').on('click',function () {
+		var username= $('.text').val();
+		var pwd =$('#pwd').val();
+		if ((username=='用户名')&&(pwd='password')) {
+		    alert('登陆成功!');
+            $(location).prop('href', 'index.html')
+        }else {
+            alert('登陆失败!');
+            $(location).prop('href', 'login.html')
+		}
+
+    });
+});
+</script>
+ <!--SIGN UP-->
+ <h1>同满云控平台</h1>
+<div class="login-form">
+	<div class="close"> </div>
+		<div class="head-info">
+			<label class="lbl-1"> </label>
+			<label class="lbl-2"> </label>
+			<label class="lbl-3"> </label>
+		</div>
+			<div class="clear"> </div>
+	<div class="avtar">
+		<img src="images/avtar2.png" />
+	</div>
+			<form>
+					<input type="text" class="text" value="用户名" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Username';}" >
+						<div class="key">
+					<input id="pwd" type="password" value="Password" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Password';}">
+						</div>
+			</form>
+	<div class="signin" id="sid2">
+		<input type="submit" value="登陆" id="sid">
+	</div>
+</div>
+ <div class="copy-rights">
+					<p>Copyright &copy; 2017.Company name All rights reserved.More Templates   - Collect from <a href="http://www.baidu.com/" title="睿灌运控" target="_blank">睿灌云控</a></p>
+			</div>
+
+</body>
+</html>
